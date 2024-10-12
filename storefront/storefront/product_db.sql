@@ -47,6 +47,8 @@ CREATE TABLE purchase_history(
   quantity INT,
 );
 
+print('lol')
+
 '''
 
 Basic Information to include:
