@@ -25,14 +25,19 @@ SECRET_KEY = "django-insecure-wci62rt6ucotp7^l)ppgc9!*3ix86g=aebnxidjig-nr(tiai7
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['http://127.0.0.1:8000/', '94.59.10.5']
 
+SITE_ID = 1
 
 # Application definition
 
 INSTALLED_APPS = [
-    "django.contrib.admin",
+    "django.contrib.admin", # needed for django allauth
     "django.contrib.auth",
+    "django.contrib.sites",
+    "allauth",
+    "allauth.account",
+    "allauth.socialaccount", # if you use social accounts
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
@@ -103,7 +108,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/4.1/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "en-uk"
 
 TIME_ZONE = "UTC"
 
