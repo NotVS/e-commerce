@@ -32,6 +32,7 @@ SITE_ID = 1
 # Application definition
 
 INSTALLED_APPS = [
+    "admin_volt.apps.AdminVoltConfig",
     "django.contrib.admin", # needed for django allauth
     "django.contrib.auth",
     "django.contrib.sites",
