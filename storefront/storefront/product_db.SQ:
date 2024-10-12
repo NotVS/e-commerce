@@ -1,6 +1,13 @@
 CREATE TABLE users(
   id INT PRIMARY KEY AUTO_INCREMENT,
-  username
+  username varchar,
+  email varchar,
+  password varchar,
+  first_name varchar,
+  date_of_birth varchar,
+  phone_number varchar,
+  
+  
 
 '''
 
