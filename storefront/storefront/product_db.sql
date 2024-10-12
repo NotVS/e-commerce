@@ -11,6 +11,19 @@ CREATE TABLE users(
   is_owner BOOLEAN, 
   last_login DATE,
   date_joined DATE,
+);
+
+CREATE TABLE address(
+  user_id INT,
+  FOREIGN KEY (user_id) REFERENCES users(user_id)
+  street VARCHAR,
+  city TEXT,
+  zip_code TEXT,
+  country TEXT,
+  additional
+);
+  
+  
   
 CREATE TABLE products(
   product_id INT PRIMARY KEY AUTO_INCREMENT,
@@ -47,7 +60,7 @@ CREATE TABLE purchase_history(
   quantity INT,
 );
 
-print('lol')
+
 
 '''
 
