@@ -1,13 +1,51 @@
 CREATE TABLE users(
-  id INT PRIMARY KEY AUTO_INCREMENT,
-  username varchar,
-  email varchar,
-  password varchar,
-  first_name varchar,
-  date_of_birth varchar,
-  phone_number varchar,
+  user_id INT PRIMARY KEY AUTO_INCREMENT,
+  username VARCHAR,
+  email VARCHAR,
+  password VARCHAR,
+  first_name VARCHAR,
+  date_of_birth DATE,
+  phone_number VARCHAR,
+  is_active BOOLEAN,
+  is_staff BOOLEAN,
+  is_owner BOOLEAN, 
+  last_login DATE,
+  date_joined DATE,
   
+CREATE TABLE products(
+  product_id INT PRIMARY KEY AUTO_INCREMENT,
+  product_name VARCHAR,
+  product_description TEXT,
+  price REAL,
+);
+
+CREATE TABLE orders(
+  order_id INT PRIMARY KEY AUTO_INCREMENT,
+  user_id INT,
+  FOREIGN KEY (user_id) REFERENCES users(user_id)
+  product_id INT,
+  FOREIGN KEY (product_id) REFERENCES products(product_id)
+  purchase_date DATE,
+  quantity INT
+);
   
+
+CREATE TABLE wish_list(
+  user_id INT,
+  FOREIGN KEY (user_id) REFERENCES users(user_id)
+  item_name VARCHAR,
+  item_description TEXT,
+  item_price REAL
+);
+  
+CREATE TABLE purchase_history(
+  user_id INT,
+  FOREIGN KEY (user_id) REFERENCES users(user_id)
+  order_id INT,
+  FOREIGN KEY (order_id) REFERENCES orders(order_id)
+  purchase_date DATE,
+  quantity INT,
+);
 
 '''
 
