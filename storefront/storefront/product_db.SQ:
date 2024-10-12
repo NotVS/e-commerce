@@ -4,7 +4,7 @@ CREATE TABLE users(
 
 '''
 
-Basic Information:
+Basic Information to include:
 
 username: A unique identifier for the user.
 email: The user's email address (typically used for login and notifications).
