@@ -11,6 +11,7 @@ CREATE TABLE users(
   is_owner BOOLEAN, 
   last_login DATE,
   date_joined DATE,
+  profile_picture BLOB,
 );
 
 CREATE TABLE address(
